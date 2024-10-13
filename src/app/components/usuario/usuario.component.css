@@ -1,0 +1,27 @@
+.usuario-container {
+  margin: 20px auto; /* Centra el contenedor en la página */
+  max-width: 400px; /* Establece un ancho máximo para el contenedor */
+  padding: 20px; /* Agrega un poco de relleno alrededor */
+  border: 1px solid #ccc; /* Opcional: añade un borde para visualizar el contenedor */
+  border-radius: 8px; /* Opcional: añade esquinas redondeadas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para dar profundidad */
+  background-color: #fff; /* Opcional: fondo blanco para el contenedor */
+}
+
+mat-form-field {
+  width: 100%; /* Mantiene los campos del formulario a 100% de ancho */
+  margin-bottom: 16px; /* Espaciado entre los campos */
+  height: 80px; /* Establece una altura uniforme para todos los campos */
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+input.mat-input-element {
+  padding: 8px; /* Ajusta el padding para todos los inputs */
+  height: 40px; /* Establece una altura uniforme para todos los inputs */
+}
+
+h2 {
+  text-align: center; /* Centra el título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}

@@ -1,0 +1,37 @@
+/* Centrar el contenedor de transacciones */
+.transaccion-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    background: #f8f8f8; /* Fondo suave */
+}
+
+/* Estilo del contenedor de transacciones */
+.transaccion-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para el contenedor */
+    text-align: center; /* Centrar el texto dentro del contenedor */
+}
+
+/* Estilo de los botones */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgb(12, 12, 105); /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Cambiar color al pasar el mouse */
+button:hover {
+    background-color: rgb(12, 12, 105); /* Color de fondo al pasar el mouse */
+}

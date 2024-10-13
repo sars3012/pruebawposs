@@ -1,0 +1,32 @@
+<div class="listar-usuarios-container">
+    <h2>Lista de Usuarios</h2>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Rol</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.identificacion }}</td>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.correo }}</td>
+          <td>{{ usuario.rol_id }}</td>
+          <td>{{ usuario.estado ? 'Activo' : 'Inactivo' }}</td>
+          <td>
+            <button (click)="editarUsuario(usuario.identificacion)">Editar</button>
+            <button (click)="desactivarUsuario(usuario.identificacion)">Desactivar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="loading">Cargando usuarios...</div>
+  </div>
+  

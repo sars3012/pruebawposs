@@ -1,0 +1,19 @@
+/* deposito.component.css */
+.deposito-container {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrar el formulario en la página */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #fff; /* Fondo blanco */
+  }
+  
+  h2 {
+    text-align: center; /* Centrar el título */
+  }
+  
+  mat-form-field {
+    width: 100%; /* Hacer que el campo ocupe todo el ancho */
+  }
+  

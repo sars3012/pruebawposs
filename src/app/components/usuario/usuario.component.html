@@ -1,0 +1,58 @@
+<div class="usuario-container">
+    <h2>Registro de Usuario</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" required>
+        <mat-error *ngIf="registerForm.get('nombre')?.hasError('required')">
+          Nombre es requerido.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Identificación</mat-label>
+        <input matInput formControlName="identificacion" required>
+        <mat-error *ngIf="registerForm.get('identificacion')?.hasError('required')">
+          Identificación es requerida.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="correo" required email>
+        <mat-error *ngIf="registerForm.get('correo')?.hasError('required')">
+          Correo es requerido.
+        </mat-error>
+        <mat-error *ngIf="registerForm.get('correo')?.hasError('email')">
+          Debe ser un correo electrónico válido.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="contraseña" required>
+        <mat-error *ngIf="registerForm.get('contraseña')?.hasError('required')">
+          Contraseña es requerida.
+        </mat-error>
+        <mat-error *ngIf="registerForm.get('contraseña')?.hasError('minlength')">
+          La contraseña debe tener al menos 8 caracteres.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Rol</mat-label>
+        <mat-select formControlName="rol_id" required>
+          <mat-option value="1">Admin</mat-option>
+          <mat-option value="2">Cliente</mat-option>
+        </mat-select>
+        <mat-error *ngIf="registerForm.get('rol_id')?.hasError('required')">
+          Rol es requerido.
+        </mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">
+        Registrar
+      </button>
+    </form>
+  </div>
+  
